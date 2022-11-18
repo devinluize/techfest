@@ -4,7 +4,6 @@ import React from "react";
 import {
   Keyboard,
   KeyboardAvoidingView,
-  Platform,
   StyleSheet,
   Text,
   TextInput,
@@ -15,6 +14,7 @@ import Task from "./Task";
 export default function App() {
   const [task, setTask] = useState();
   const [taskItems, setTaskItems] = useState([]);
+  // this fuction if for task handler
   const taskhandler = () => {
     Keyboard.dismiss();
     console.log(task);
