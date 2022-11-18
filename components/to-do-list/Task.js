@@ -6,12 +6,14 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+// import Star from "../../assets/star.png";
 
 const Task = (props) => {
   return (
     <View style={styles.item}>
       <View style={styles.itemleft}>
         <TouchableOpacity style={styles.square}></TouchableOpacity>
+        {/* <Star /> */}
         <Text style={styles.itemtext}>{props.text}</Text>
       </View>
       <View style={styles.circular}></View>
