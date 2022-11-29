@@ -10,6 +10,9 @@ const App = () => {
   const Stack = createNativeStackNavigator();
 
   return (
+    // <View>
+    //   <Text>12332</Text>
+
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
@@ -21,6 +24,7 @@ const App = () => {
         <Stack.Screen name="ProductInfo" component={ProductInfo} />
       </Stack.Navigator>
     </NavigationContainer>
+    // </View>
   );
 };
 
