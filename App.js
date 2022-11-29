@@ -4,7 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./components/screens/Home";
 import MyCart from "./components/screens/MyCart";
-import MentorInfo from "./components/screens/Mentorinfo";
+import ProductInfo from "./components/screens/ProductInfo";
 
 const App = () => {
   const Stack = createNativeStackNavigator();
@@ -18,7 +18,7 @@ const App = () => {
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="MyCart" component={MyCart} />
-        <Stack.Screen name="ProductInfo" component={MentorInfo} />
+        <Stack.Screen name="ProductInfo" component={ProductInfo} />
       </Stack.Navigator>
     </NavigationContainer>
   );
