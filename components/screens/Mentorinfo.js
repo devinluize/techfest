@@ -224,8 +224,9 @@ const Mentorinfo = ({ route, navigation }) => {
               opacity: 0.5,
               lineHeight: 20,
               maxWidth: "85%",
-              maxHeight: 44,
+              maxHeight: 80,
               marginBottom: 18,
+              textAlign: "justify",
             }}
           >
             {product.description}
