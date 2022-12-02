@@ -329,7 +329,7 @@ const ProductInfo = ({ route, navigation }) => {
                 marginBottom: 4,
               }}
             >
-              Rp. {product.productPrice}.00
+              {product.productPrice}.00
             </Text>
             <Text>
               Tax Rate 2%~ &#8377;{product.productPrice / 20} (&#8377;

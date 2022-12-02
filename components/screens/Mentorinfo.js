@@ -13,9 +13,6 @@ import {
 import { COLOURS, Items } from "../database/Database";
 import Entypo from "react-native-vector-icons/Entypo";
 import Ionicons from "react-native-vector-icons/Ionicons";
-MaterialIcons;
-import Fontawesome from "react-native-vector-icons/FontAwesome5";
-import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 const Mentorinfo = ({ route, navigation }) => {
   const { productID } = route.params;
   const [product, setProduct] = useState({});
@@ -41,6 +38,7 @@ const Mentorinfo = ({ route, navigation }) => {
   };
   //Untuk scroll view foto mentor
   const renderProduct = ({ item, index }) => {
+    console.log(product.productImageList);
     return (
       <View
         style={{
@@ -170,8 +168,8 @@ const Mentorinfo = ({ route, navigation }) => {
               marginVertical: 14,
             }}
           >
-            <Fontawesome
-              name="chalkboard-teacher"
+            <Entypo
+              name="man"
               style={{
                 fontSize: 18,
                 color: COLOURS.blue,
@@ -208,7 +206,7 @@ const Mentorinfo = ({ route, navigation }) => {
               {product.productName}
             </Text>
             <Ionicons
-              name="information-circle-sharp"
+              name="link-outline"
               style={{
                 fontSize: 24,
                 color: COLOURS.blue,
@@ -263,8 +261,8 @@ const Mentorinfo = ({ route, navigation }) => {
                   marginRight: 10,
                 }}
               >
-                <MaterialIcons
-                  name="add-location-alt"
+                <Entypo
+                  name="location-pin"
                   style={{
                     fontSize: 16,
                     color: COLOURS.blue,

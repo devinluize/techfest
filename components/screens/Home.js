@@ -122,7 +122,6 @@ const Home = ({ navigation }) => {
       </TouchableOpacity>
     );
   };
-
   return (
     <View
       style={{
