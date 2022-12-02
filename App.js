@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./components/screens/Home";
 import MyCart from "./components/screens/MyCart";
 import ProductInfo from "./components/screens/ProductInfo";
-
+import Mentorinfo from "./components/screens/Mentorinfo";
 const App = () => {
   const Stack = createNativeStackNavigator();
 
@@ -21,7 +21,7 @@ const App = () => {
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="MyCart" component={MyCart} />
-        <Stack.Screen name="ProductInfo" component={ProductInfo} />
+        <Stack.Screen name="Mentorinfo" component={Mentorinfo} />
       </Stack.Navigator>
     </NavigationContainer>
     // </View>

@@ -9,14 +9,11 @@ import {
   Image,
   Dimensions,
   Animated,
-  ToastAndroid,
 } from "react-native";
 import { COLOURS, Items } from "../database/Database";
 import Entypo from "react-native-vector-icons/Entypo";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-
-const MentorInfo = ({ route, navigation }) => {
+const Mentorinfo = ({ route, navigation }) => {
   const { productID } = route.params;
   const [product, setProduct] = useState({});
   const width = Dimensions.get("window").width;
@@ -39,42 +36,7 @@ const MentorInfo = ({ route, navigation }) => {
       }
     }
   };
-  //add to cart
-
-  // const addToCart = async (id) => {
-  //   let itemArray = await AsyncStorage.getItem("cartItems");
-  //   itemArray = JSON.parse(itemArray);
-  //   if (itemArray) {
-  //     let array = itemArray;
-  //     array.push(id);
-
-  //     try {
-  //       await AsyncStorage.setItem("cartItems", JSON.stringify(array));
-  //       ToastAndroid.show(
-  //         "Item Added Successfully to cart",
-  //         ToastAndroid.SHORT
-  //       );
-  //       navigation.navigate("Home");
-  //     } catch (error) {
-  //       return error;
-  //     }
-  //   } else {
-  //     let array = [];
-  //     array.push(id);
-  //     try {
-  //       await AsyncStorage.setItem("cartItems", JSON.stringify(array));
-  //       ToastAndroid.show(
-  //         "Item Added Successfully to cart",
-  //         ToastAndroid.SHORT
-  //       );
-  //       navigation.navigate("Home");
-  //     } catch (error) {
-  //       return error;
-  //     }
-  //   }
-  // };
-
-  //product horizontal scroll product card
+  //Untuk scroll view foto mentor
   const renderProduct = ({ item, index }) => {
     return (
       <View
@@ -305,7 +267,7 @@ const MentorInfo = ({ route, navigation }) => {
                   }}
                 />
               </View>
-              <Text> Rustaveli Ave 57,{"\n"}17-001, Batume</Text>
+              <Text> Kav 21, Alam Sutera,{"\n"}Binus University, Banten</Text>
             </View>
             <Entypo
               name="chevron-right"
@@ -329,11 +291,11 @@ const MentorInfo = ({ route, navigation }) => {
                 marginBottom: 4,
               }}
             >
-              &#8377; {product.productPrice}.00
+              Rp. {product.productPrice}.00
             </Text>
             <Text>
-              Tax Rate 2%~ &#8377;{product.productPrice / 20} (&#8377;
-              {product.productPrice + product.productPrice / 20})
+              Include tax Rp.
+              {product.productPrice + product.productPrice / 20}
             </Text>
           </View>
         </View>
@@ -378,4 +340,4 @@ const MentorInfo = ({ route, navigation }) => {
   );
 };
 
-export default MentorInfo;
+export default Mentorinfo;

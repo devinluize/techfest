@@ -46,7 +46,7 @@ const Home = ({ navigation }) => {
     return (
       <TouchableOpacity
         onPress={() =>
-          navigation.navigate("ProductInfo", { productID: data.id })
+          navigation.navigate("Mentorinfo", { productID: data.id })
         }
         style={{
           width: "48%",
@@ -118,7 +118,7 @@ const Home = ({ navigation }) => {
             ></View>
           )
         ) : null}
-        <Text>Rp. {data.productPrice}</Text>
+        <Text>Rp. {data.productPrice} / 120 minutes</Text>
       </TouchableOpacity>
     );
   };
@@ -168,7 +168,8 @@ const Home = ({ navigation }) => {
             }}
           >
             Book your private mentor now
-            {"\n"}Knowledge is the future!!
+            {"\n"}
+            Knowledge is the future!!
           </Text>
         </View>
         <View
@@ -197,7 +198,7 @@ const Home = ({ navigation }) => {
                   letterSpacing: 1,
                 }}
               >
-                Products
+                Mentor Available
               </Text>
               <Text
                 style={{
