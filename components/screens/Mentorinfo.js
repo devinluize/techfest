@@ -11,9 +11,11 @@ import {
   Animated,
 } from "react-native";
 import { COLOURS, Items } from "../database/Database";
+import AntDesign from "react-native-vector-icons/Entypo";
 import Entypo from "react-native-vector-icons/Entypo";
 import Ionicons from "react-native-vector-icons/Ionicons";
 const Mentorinfo = ({ route, navigation }) => {
+  // useFocusEffect(() => {
   const { productID } = route.params;
   const [product, setProduct] = useState({});
   const width = Dimensions.get("window").width;
@@ -36,9 +38,10 @@ const Mentorinfo = ({ route, navigation }) => {
       }
     }
   };
+
   //Untuk scroll view foto mentor
   const renderProduct = ({ item, index }) => {
-    console.log(product.productImageList);
+    console.log(product.id);
     return (
       <View
         style={{
@@ -91,7 +94,7 @@ const Mentorinfo = ({ route, navigation }) => {
               width: "100%",
               flexDirection: "row",
               justifyContent: "space-between",
-              paddingTop: 16,
+              // paddingTop: 16,
               paddingLeft: 16,
             }}
           >
@@ -102,7 +105,7 @@ const Mentorinfo = ({ route, navigation }) => {
                   fontSize: 18,
                   color: COLOURS.backgroundDark,
                   padding: 12,
-                  backgroundColor: COLOURS.white,
+                  backgroundColor: "#b9bbbd",
                   borderRadius: 10,
                 }}
               />
@@ -182,7 +185,7 @@ const Mentorinfo = ({ route, navigation }) => {
                 color: COLOURS.black,
               }}
             >
-              Mentor
+              {product.mentorName}
             </Text>
           </View>
           <View
@@ -191,6 +194,7 @@ const Mentorinfo = ({ route, navigation }) => {
               marginVertical: 4,
               alignItems: "center",
               justifyContent: "space-between",
+              marginBottom: -10,
             }}
           >
             <Text
@@ -206,7 +210,7 @@ const Mentorinfo = ({ route, navigation }) => {
               {product.productName}
             </Text>
             <Ionicons
-              name="link-outline"
+              name="share-social"
               style={{
                 fontSize: 24,
                 color: COLOURS.blue,
@@ -295,10 +299,10 @@ const Mentorinfo = ({ route, navigation }) => {
             >
               Rp. {product.productPrice}.00
             </Text>
-            <Text>
+            {/* <Text>
               Include tax Rp.
               {product.productPrice + product.productPrice / 20}
-            </Text>
+            </Text> */}
           </View>
         </View>
       </ScrollView>
@@ -333,13 +337,14 @@ const Mentorinfo = ({ route, navigation }) => {
               textTransform: "uppercase",
             }}
           >
-            Add to cart
-            {/* {product.isAvailable ? "Add to cart" : "Not Avialable"} */}
+            Learn YUK!!!
           </Text>
         </TouchableOpacity>
       </View>
     </View>
   );
+  // }
+  // );
 };
 
 export default Mentorinfo;

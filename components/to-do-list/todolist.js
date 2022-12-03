@@ -1,6 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
   Keyboard,
   KeyboardAvoidingView,
@@ -11,8 +13,10 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { COLOURS } from "../database/Database";
 import Task from "./Task";
-export default function App() {
+import Entypo from "react-native-vector-icons/Entypo";
+const App = ({ route, navigation }) => {
   const [task, setTask] = useState();
   const [taskItems, setTaskItems] = useState([]);
   const taskhandler = () => {
@@ -26,8 +30,30 @@ export default function App() {
     itemscopy.splice(index, 1);
     setTaskItems(itemscopy);
   };
+
   return (
     <View style={styles.container}>
+      <View
+        style={{
+          width: 50,
+          marginTop: 15,
+          paddingLeft: 10,
+          marginBottom: -40,
+        }}
+      >
+        <TouchableOpacity onPress={() => navigation.goBack("Home")}>
+          <Entypo
+            name="chevron-left"
+            style={{
+              fontSize: 18,
+              color: COLOURS.backgroundDark,
+              padding: 12,
+              backgroundColor: "#b9bbbd",
+              borderRadius: 10,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
       <View style={styles.taskwrap}>
         <Text style={styles.title}>Your tasks</Text>
         <View style={styles.items}>
@@ -60,7 +86,7 @@ export default function App() {
       </KeyboardAvoidingView>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -69,9 +95,11 @@ const styles = StyleSheet.create({
   },
   taskwrap: {
     paddingTop: 50,
+
     paddingHorizontal: 30,
   },
   title: {
+    alignSelf: "center",
     fontSize: 24,
     fontWeight: "bold",
   },
@@ -107,3 +135,4 @@ const styles = StyleSheet.create({
   },
   addtext: {},
 });
+export default App;

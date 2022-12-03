@@ -9,7 +9,8 @@ import {
 } from "react-native";
 import { COLOURS, Items } from "../database/Database";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
-
+import AntDesign from "react-native-vector-icons/AntDesign";
+import App from "../to-do-list/todolist";
 const Home = ({ navigation }) => {
   const [mentor, setMentor] = useState([]);
   const [accessory, setAccessory] = useState([]);
@@ -31,8 +32,6 @@ const Home = ({ navigation }) => {
     for (let index = 0; index < Items.length; index++) {
       if (Items[index].category == "product") {
         productList.push(Items[index]);
-      } else if (Items[index].category == "accessory") {
-        accessoryList.push(Items[index]);
       }
     }
 
@@ -253,6 +252,26 @@ const Home = ({ navigation }) => {
           ></View>
         </View>
       </ScrollView>
+      <View
+        style={{
+          position: "absolute",
+          left: "80%",
+          bottom: 0,
+        }}
+      >
+        <TouchableOpacity onPress={() => navigation.navigate("Todolist")}>
+          <AntDesign
+            name="pluscircle"
+            style={{
+              fontSize: 60,
+              color: COLOURS.blue,
+              padding: 12,
+              // backgroundColor: "#000",
+              // borderRadius: 30,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
