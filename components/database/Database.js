@@ -1,13 +1,13 @@
 export const COLOURS = {
-  white: "#ffffff",
+  white: "#E8EAED",
   black: "#000000",
   green: "#00AC76",
   red: "#C04345",
   blue: "#55BCF6",
   // backgroundLight: "#F0F0F3",
-  backgroundMedium: "#B9B9B9",
-  backgroundDark: "#777777",
-  backgroundLight: "#E8EAED",
+  backgroundMedium: "#fff",
+  backgroundDark: "#fff",
+  backgroundLight: "#fff",
 };
 export const Items = [
   {
@@ -15,7 +15,8 @@ export const Items = [
     category: "product",
     mentorName: "Steven Christiansen",
     productPrice: 35000,
-    description: "Saya lulusan di Harvard University dan mengambil jurusan Matematika. Saya dapat membantu lebih dalam dan mengajarkan anda seputar jurusan Matematika.",
+    description:
+      "Saya lulusan di Harvard University dan mengambil jurusan Matematika. Saya dapat membantu lebih dalam dan mengajarkan anda seputar jurusan Matematika.",
     isOff: false,
     ofpercentage: 10,
     productImage: require("../database/assets/products/Mentor1.jpg"),
@@ -30,7 +31,8 @@ export const Items = [
     category: "product",
     mentorName: "Carlos Bayson",
     productPrice: 19000,
-    description: "Saya sedang menjalankan kuliah di Binus University. Keinginan saya adalah mengajarkan kalian mata pelajaran Matematika.",
+    description:
+      "Saya sedang menjalankan kuliah di Binus University. Keinginan saya adalah mengajarkan kalian mata pelajaran Matematika.",
     isOff: false,
     ofpercentage: 10,
     productImage: require("../database/assets/products/Mentor2.jpg"),
@@ -45,7 +47,8 @@ export const Items = [
     category: "product",
     mentorName: "Christine Gabriella",
     productPrice: 20000,
-    description: "Saya adalah seorang guru di Sekolah Negeri 1. Saya ingin membantu siapa saja yang ingin belajar mengenai Bahasa Indonesia dan Bahasa Inggris",
+    description:
+      "Saya adalah seorang guru di Sekolah Negeri 1. Saya ingin membantu siapa saja yang ingin belajar mengenai Bahasa Indonesia dan Bahasa Inggris",
     isOff: false,
     ofpercentage: 10,
     productImage: require("../database/assets/products/Mentor3.jpg"),
@@ -60,7 +63,8 @@ export const Items = [
     category: "product",
     mentorName: "Gaby Vania",
     productPrice: 33500,
-    description: "Saya sedang berkuliah di Massachusetts Institute of Technology. Saya dapat mengajarkan dan membantu anda untuk memulai pelajaran Fisika secara basic maupun tidak.",
+    description:
+      "Saya sedang berkuliah di Massachusetts Institute of Technology. Saya dapat mengajarkan dan membantu anda untuk memulai pelajaran Fisika secara basic maupun tidak.",
     isOff: false,
     ofpercentage: 10,
     productImage: require("../database/assets/products/Mentor4.jpg"),
@@ -75,7 +79,8 @@ export const Items = [
     category: "product",
     mentorName: "Kevin Joenathan",
     productPrice: 25000,
-    description: "Saya berlatar belakang pendidikan di Universitas Indonesia. Saya ingin membantu anda yang kesusahan pada mata pelajaran Fisika, Kimia, atau Biologi.",
+    description:
+      "Saya berlatar belakang pendidikan di Universitas Indonesia. Saya ingin membantu anda yang kesusahan pada mata pelajaran Fisika, Kimia, atau Biologi.",
     isOff: false,
     ofpercentage: 10,
     productImage: require("../database/assets/products/Mentor5.jpg"),
@@ -90,7 +95,8 @@ export const Items = [
     category: "product",
     mentorName: "James Christiansen",
     productPrice: 15000,
-    description: "Mengajar seseorang adalah keinginan saya pada generasi ini. Saya adalah guru di sekolah Mutiara Bangsa 1. Saya akan mengajarkan anda seputar pelajaran Biologi secara keseluruhan.",
+    description:
+      "Mengajar seseorang adalah keinginan saya pada generasi ini. Saya adalah guru di sekolah Mutiara Bangsa 1. Saya akan mengajarkan anda seputar pelajaran Biologi secara keseluruhan.",
     isOff: false,
     ofpercentage: 10,
     productImage: require("../database/assets/products/Mentor6.jpg"),
@@ -105,7 +111,8 @@ export const Items = [
     category: "product",
     mentorName: "Evelyn Felita",
     productPrice: 22000,
-    description: "Saya adalah mahasiswa lulusan S2 di Universitas Indonesia. Banyak sekali orang yang ingin belajar mengenai Matematika. Saya ingin mengajarkan mereka yang minat kepada Matematika.",
+    description:
+      "Saya adalah mahasiswa lulusan S2 di Universitas Indonesia. Banyak sekali orang yang ingin belajar mengenai Matematika. Saya ingin mengajarkan mereka yang minat kepada Matematika.",
     isOff: false,
     ofpercentage: 10,
     productImage: require("../database/assets/products/Mentor7.jpg"),
@@ -120,7 +127,8 @@ export const Items = [
     category: "product",
     mentorName: "Jessica Angel",
     productPrice: 25000,
-    description: "I am an English teacher and have taught for 3 years at English First (EF). I can help you learn English from basic to expert.",
+    description:
+      "I am an English teacher and have taught for 3 years at English First (EF). I can help you learn English from basic to expert.",
     isOff: false,
     ofpercentage: 10,
     productImage: require("../database/assets/products/Mentor8.jpg"),
@@ -135,7 +143,8 @@ export const Items = [
     category: "product",
     mentorName: "Karina Jennie",
     productPrice: 21500,
-    description: "Saya adalah seorang dosen. Saya telah mengajar selama 5 tahun. Keinginan saya adalah mengajar mata pelajaran Kimia untuk orang yang menginginkannya.",
+    description:
+      "Saya adalah seorang dosen. Saya telah mengajar selama 5 tahun. Keinginan saya adalah mengajar mata pelajaran Kimia untuk orang yang menginginkannya.",
     isOff: false,
     ofpercentage: 10,
     productImage: require("../database/assets/products/Mentor9.jpg"),
@@ -150,7 +159,8 @@ export const Items = [
     category: "product",
     mentorName: "Michelle Vanessa",
     productPrice: 21500,
-    description: "Saya sedang berkuliah di Binus University. Cita-cita saya adalah membantu bangsa ini dengan cara mengajarkan mereka yang ingin belajar Matematika.",
+    description:
+      "Saya sedang berkuliah di Binus University. Cita-cita saya adalah membantu bangsa ini dengan cara mengajarkan mereka yang ingin belajar Matematika.",
     isOff: false,
     ofpercentage: 10,
     productImage: require("../database/assets/products/Mentor10.jpg"),
