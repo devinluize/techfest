@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import {
   View,
   Text,
@@ -10,6 +10,7 @@ import {
 import { COLOURS, Items } from "../database/Database";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import AntDesign from "react-native-vector-icons/AntDesign";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import App from "../to-do-list/todolist";
 const Home = ({ navigation }) => {
   const [mentor, setMentor] = useState([]);
@@ -50,6 +51,7 @@ const Home = ({ navigation }) => {
         style={{
           width: "48%",
           marginVertical: 14,
+          // backgroundColor: "#fff",
         }}
       >
         <View
@@ -143,19 +145,43 @@ const Home = ({ navigation }) => {
           style={{
             marginBottom: 10,
             padding: 16,
+            // flexDirection: "row",
           }}
         >
-          <Text
+          <View
             style={{
-              fontSize: 26,
-              color: COLOURS.black,
-              fontWeight: "500",
-              letterSpacing: 1,
-              marginBottom: 10,
+              width: "100%",
+              flexDirection: "row",
+              // justifyContent: "space-between",
+              padding: 16,
+              alignSelf: "center",
+              alignItems: "center",
+              marginLeft: 120,
             }}
           >
-            Mentor application
-          </Text>
+            <Text
+              style={{
+                fontSize: 26,
+                color: COLOURS.black,
+                fontWeight: "500",
+                letterSpacing: 1,
+                marginBottom: 10,
+                alignSelf: "center",
+              }}
+            >
+              Morning, Learner
+            </Text>
+            <MaterialCommunityIcons
+              name="hand-wave"
+              style={{
+                marginLeft: 10,
+                marginBottom: 10,
+                fontSize: 25,
+                marginRight: 6,
+                color: COLOURS.yellow,
+              }}
+            />
+          </View>
           <Text
             style={{
               fontSize: 14,
@@ -163,11 +189,11 @@ const Home = ({ navigation }) => {
               fontWeight: "400",
               letterSpacing: 1,
               lineHeight: 24,
+              alignSelf: "center",
+              textAlign: "center",
             }}
           >
-            Book your private mentor now
-            {"\n"}
-            Knowledge is the future!!
+            If you are not willing to learn,{"\n"}no one can help you.
           </Text>
         </View>
         <View

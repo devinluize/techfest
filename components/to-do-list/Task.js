@@ -6,15 +6,28 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-
+import Octicons from "react-native-vector-icons/Octicons";
+import { COLOURS } from "../database/Database";
 const Task = (props) => {
   return (
     <View style={styles.item}>
       <View style={styles.itemleft}>
-        <TouchableOpacity style={styles.square}></TouchableOpacity>
+        <TouchableOpacity>
+          <Octicons
+            name="checklist"
+            style={{
+              fontSize: 22,
+              // backgroundColor: COLOURS.black,
+              color: COLOURS.green,
+              marginRight: 10,
+            }}
+          />
+        </TouchableOpacity>
+
         <Text style={styles.itemtext}>{props.text}</Text>
       </View>
-      <View style={styles.circular}></View>
+
+      {/* <View style={styles.circular}></View> */}
     </View>
   );
 };
@@ -27,6 +40,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     marginBottom: 20,
+    // borderColor: "#425471",
+    // borderWidth: 1,
   },
   itemleft: {
     flexDirection: "row",
@@ -42,7 +57,7 @@ const styles = StyleSheet.create({
     marginRight: 15,
   },
   itemtext: {
-    maxWidth: "80%",
+    maxWidth: "100%",
   },
   text: {},
   circular: {

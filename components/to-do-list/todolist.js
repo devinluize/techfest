@@ -15,6 +15,7 @@ import {
 } from "react-native";
 import { COLOURS } from "../database/Database";
 import Task from "./Task";
+
 import Entypo from "react-native-vector-icons/Entypo";
 const App = ({ route, navigation }) => {
   const [task, setTask] = useState();
@@ -133,6 +134,9 @@ const styles = StyleSheet.create({
     borderColor: "#C0C0C0",
     borderWidth: 1,
   },
-  addtext: {},
+  addtext: {
+    fontSize: 28,
+    color: COLOURS.green,
+  },
 });
 export default App;
