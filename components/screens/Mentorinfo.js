@@ -11,8 +11,6 @@ import {
   Animated,
 } from "react-native";
 import { COLOURS, Items } from "../database/Database";
-import AntDesign from "react-native-vector-icons/Entypo";
-import Octicons from "react-native-vector-icons/Octicons";
 import Entypo from "react-native-vector-icons/Entypo";
 import Ionicons from "react-native-vector-icons/Ionicons";
 const Mentorinfo = ({ route, navigation }) => {
