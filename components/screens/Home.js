@@ -156,7 +156,8 @@ const Home = ({ navigation }) => {
               padding: 16,
               alignSelf: "center",
               alignItems: "center",
-              marginLeft: 120,
+              justifyContent: "center",
+              // marginLeft: 120,
             }}
           >
             <Text

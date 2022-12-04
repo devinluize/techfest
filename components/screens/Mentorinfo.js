@@ -230,7 +230,7 @@ const Mentorinfo = ({ route, navigation }) => {
               opacity: 0.5,
               lineHeight: 20,
               maxWidth: "85%",
-              maxHeight: 80,
+              maxHeight: 90,
               marginBottom: 18,
               textAlign: "justify",
             }}
